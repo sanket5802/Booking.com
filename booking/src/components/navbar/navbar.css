@@ -1,0 +1,41 @@
+.Navbar {
+    height: 70px;
+    background-color: rgb(16, 16, 109);
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+  }
+  
+  .navContainer {
+    display: flex;
+    flex-grow: 1; /* Allow the container to grow and take available space */
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    max-width: 1200px; /* Limit the width of the container */
+    width: 100%;
+    padding: 0 20px; /* Add padding for better spacing */
+  }
+  
+  .logo {
+    font-weight: 500;
+    font-size: 24px; /* Increase the font size for the logo */
+  }
+  
+  .navbutton {
+    background-color: #0071c2;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 10px 20px; /* Slightly larger padding for buttons */
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbutton:hover {
+    background-color: #005693; /* Darker color on hover */
+  }
+  

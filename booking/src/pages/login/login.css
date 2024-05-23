@@ -1,0 +1,58 @@
+/* General styles for the login container */
+.login {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../../simon-berger-twukN12EN7c-unsplash.jpg') center/cover no-repeat;
+}
+
+/* Container for input fields and button */
+.lContainer {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    padding: 30px;
+    gap: 30px;
+    background: rgba(255, 255, 255, 0.758); /* Transparent white background */
+    border-radius: 15px;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for input fields */
+.lContainer > input {
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0); /* Fully transparent background */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    
+    transition: border-color 0.3s ease-in-out;
+    line-height: 25px; /* Center the placeholder vertically */
+    color: #333; /* Text color for placeholder */
+}
+
+/* Styling for the login button */
+.lContainer > button {
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    background-color: #d5b0bc;
+    color: #fff;
+    border: none;
+    background-color: #d8456a;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover effect for the button */
+.lContainer > button:hover {
+    background-color: #8b052f;
+} 
+
+    

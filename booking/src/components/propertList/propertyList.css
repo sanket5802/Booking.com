@@ -1,0 +1,81 @@
+.pList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1024px; /* Set maximum width for the container */
+    margin: 0 auto; /* Center the container on the page */
+}
+
+.pListItem {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ; /* Added background transition */
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    filter: brightness(80%);
+    width: calc(20% - 20px); /* Adjust the width to fit 5 items with 20px gap */
+    box-sizing: border-box; 
+    background: linear-gradient(45deg, #3498db, #8e44ad); /* Background gradient */
+}
+
+.pListItem:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 255, 255, 0.8); /* Add glowing effect */
+    background: linear-gradient(45deg, #2980b9, #663399);
+    filter: brightness(100%) drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)); /* Hover brightness and glowing effect */
+}
+
+.pListItem:hover .overlay {
+    transform: translateY(0);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); /* Overlay gradient */
+    opacity: 0.7;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.pListImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for images */
+}
+
+.pListTitles {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    transition: opacity 0.3s ease, text-shadow 0.3s ease; /* Added text-shadow transition */
+}
+
+.pListTitles h1,
+.pListTitles h2 {
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Text shadow for better visibility */
+}
+
+.pListTitles h2 {
+    font-weight: normal;
+    font-size: 18px;
+    margin: 5px 0 0;
+}
+
+.pListItem:hover .pListTitles {
+    opacity: 0;
+}
+@media (max-width: 1024px) {
+    .pListItem {
+        width: calc(25% - 20px); /* Adjust the width for smaller screens */
+    }
+}
